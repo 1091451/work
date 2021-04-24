@@ -3,12 +3,9 @@ $(function(){
     var topicCount = topic.length;
     var millisecsPerDay = 24*60*60*1000;
     for(var x=0;x<topicCount;x++){
-        if(x == 0||x==1){
-            style
-        }
         $("#courseTable").append("<tr>");
         $("#courseTable").append(`<td>${x+1}</td>`);
-        $("#courseTable").append(`<td>${(new Date(startDate.getTime()+7*x*millisecsPerDay)).toLocaleDateString().slice(5)}</td>`);
+        $("#courseTable").append(`<td>${(new Date(startDate.getTime()+7*x*millisecsPerDay)).toLocaleDateString()}</td>`);
         $("#courseTable").append(`<td>${topic[x]}</td>`);
         $("#courseTable").append("</tr>");
     }
